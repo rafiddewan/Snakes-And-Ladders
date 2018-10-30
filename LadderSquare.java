@@ -24,7 +24,6 @@ public class LadderSquare extends SorLSquare
      * Returns an integer of the space that was landed on
      * @return int
      */
-    @Override
     public int landOn()
     {
        return super.landOn();
@@ -34,6 +33,7 @@ public class LadderSquare extends SorLSquare
      * Returns the String of the LadderSquare class variables
      * @return String
      */
+     @Override
     public String toString()
     {
         return getNumber() + "+" + getEndSquare();
