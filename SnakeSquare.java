@@ -33,6 +33,7 @@ public class SnakeSquare  extends SorLSquare
      * Returns the String of the SnakeSquare class variables
      * @return String
      */
+     @Override
     public String toString()
     {
         return getNumber() + "-" + getEndSquare();
