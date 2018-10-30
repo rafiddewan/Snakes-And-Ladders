@@ -24,7 +24,6 @@ public class SnakeSquare  extends SorLSquare
      * Returns an integer of the space that was landed on
      * @return int
      */
-    @Override
     public int landOn()
     {
         return super.landOn();
