@@ -108,10 +108,6 @@ public class SnakesAndLadders
         System.out.println("Player " + player + " rolled " + roll);
         int space = getPlayerPosition(player); //Gets the position of the player
 
-        /*These are just placeholders to check if the space the player landed on is a snake square or a ladder square*/
-        SnakeSquare snake = new SnakeSquare(0,-1);
-        LadderSquare ladder = new LadderSquare(-1,0);
-
         // If the roll is too large,the player must move backwards, in excess amount
         if(space > 100)
         {
@@ -121,11 +117,11 @@ public class SnakesAndLadders
         }
 
         //If the player lands on a snake/ladder space transfer them to a new place
-        if(board[space - 1].getClass() == ladder.getClass())
+        if(board[space - 1] instanceof LadderSquare)
         {
             players[player] = board[space - 1].landOn();
         }
-        else if(board[space - 1].getClass() == snake.getClass())
+        else if(board[space - 1] instanceof SnakeSquare)
         {
             players[player] =  board[space - 1].landOn();
             System.out.println("Oh no!"); // Only if landed on snake squares
