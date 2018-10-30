@@ -42,6 +42,7 @@ public class SorLSquare extends SnLSquare
      * Returns the String of the SorLSquare class variables
      * @return String
      */
+     @Override
     public String toString()
     {
         return getNumber() + ":" + getEndSquare();
@@ -52,6 +53,7 @@ public class SorLSquare extends SnLSquare
      * @param obj
      * @return boolean
      */
+     @Override
     public boolean equals(Object obj) {
         if(obj == this) return true;
         if(obj == null)return false;
