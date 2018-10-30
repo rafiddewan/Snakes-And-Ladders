@@ -151,9 +151,11 @@ public class SnakesAndLadders
      */
     public int getWinner()
     {
-        if(players[0] == 100) return 0;
-        else if(players[1] == 100) return 1;
-        else return -1;
+        //Loops to get the winner
+        for(int i = 0; i < NUM_PLAYERS; i++){
+            if(isPlayerWinner(i)) return i; //This player is a winner
+        }
+        return -1; //no one is a winner so far
     }
 
     /**
@@ -204,7 +206,7 @@ public class SnakesAndLadders
      */
     public static void main(String args[])
     {
-        SnakesAndLadders game = new SnakesAndLadders(); //Create the game
+        SnakesAndLadders game = new SnakesAndLadders(5); //Create the game
         System.out.println(game.toString()); //Print the board
         int player = 0; //Set Player 0 as starting player
         boolean check; //See if the player has/hasn't finished their turn
@@ -220,11 +222,10 @@ public class SnakesAndLadders
                 System.out.println(game.toStringCurrentPositions());
             }
             /*Change players turn once their turn has ended*/
-            if(player == 0) player = 1;
-            else if(player == 1) player = 0;
+            if(game.getWinner() == player) System.out.println("Player " + player +  " wins.");
+            player++;
+            if(player == NUM_PLAYERS) player = 0; //If the last player goes then the first player goes back to doing it again
         }
-        if(game.getWinner() == 0) System.out.println("Player 0 wins.");
-        if(game.getWinner() == 1) System.out.println("Player 1 wins.");
     }
 }
 
