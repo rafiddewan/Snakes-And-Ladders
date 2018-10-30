@@ -34,6 +34,7 @@ public class SorLSquare extends SnLSquare
      * Returns an integer of the new place after landing on the snake or ladder square
      * @return int
      */
+     @Override
     public int landOn() {
         return getEndSquare();
     }
