@@ -22,7 +22,7 @@ public class SorLSquare extends SnLSquare
     }
 
     /**
-     *
+     * Returns the end of the ladder/snake square
      * @return int
      */
     public int getEndSquare()
@@ -35,7 +35,7 @@ public class SorLSquare extends SnLSquare
      * @return int
      */
     public int landOn() {
-        return endSquare;
+        return getEndSquare();
     }
 
     /**
@@ -53,8 +53,11 @@ public class SorLSquare extends SnLSquare
      * @return boolean
      */
     public boolean equals(Object obj) {
-        if(obj == null || obj.getClass() != this.getClass()) return false; //Check if object is null or is of the same class
+        if(obj == this) return true;
+        if(obj == null)return false;
+        if(obj.getClass() != this.getClass()) return false;
         SorLSquare sorLSquare = (SorLSquare) obj; //If object is of this class cast it to the SorLSquare object
         return sorLSquare.endSquare == this.endSquare && sorLSquare.getNumber() == getNumber(); //Check if the values of the SorLSquare object are the same or not
     }
 }
+

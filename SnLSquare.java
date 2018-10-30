@@ -53,8 +53,11 @@ public class SnLSquare
      */
     public boolean equals(Object obj)
     {
+        if(obj == this) return true;
+        if(obj == null)return false;
         if(obj.getClass() != this.getClass()) return false;
         SnLSquare snLSquare = (SnLSquare) obj;
         return snLSquare.number == this.number;
     }
 }
+

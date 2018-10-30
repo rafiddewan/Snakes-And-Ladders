@@ -50,3 +50,4 @@ public class LadderSquare extends SorLSquare
         return super.equals(obj);
     }
 }
+

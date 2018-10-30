@@ -50,3 +50,4 @@ public class SnakeSquare  extends SorLSquare
         return super.equals(obj);
     }
 }
+

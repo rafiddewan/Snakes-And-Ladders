@@ -1,7 +1,5 @@
 package com.company;
 
-import com.sun.media.jfxmedia.events.PlayerEvent;
-
 /**
  * Game Engine
  * Game Client
@@ -229,3 +227,4 @@ public class SnakesAndLadders
         if(game.getWinner() == 1) System.out.println("Player 1 wins.");
     }
 }
+
