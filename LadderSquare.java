@@ -45,9 +45,10 @@ public class LadderSquare extends SorLSquare
      * @param obj
      * @return boolean
      */
+     /*
     public boolean equals(Object obj)
     {
         return super.equals(obj);
-    }
+    }*/
 }
 
