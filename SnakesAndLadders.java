@@ -81,8 +81,8 @@ public class SnakesAndLadders
                 case 93:
                     this.board[i] = new SnakeSquare(93,73);
                     break;
-                case 96:
-                    this.board[i] = new SnakeSquare(96,75);
+                case 95:
+                    this.board[i] = new SnakeSquare(95,75);
                     break;
                 case 99:
                     this.board[i] = new SnakeSquare(99,78);
